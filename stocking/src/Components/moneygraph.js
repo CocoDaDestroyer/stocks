@@ -15,8 +15,9 @@ const NetWorthGraph = ({ netWorthData }) => {
             x: dates,
             y: netWorth,
             type: 'scatter',
-            mode: 'lines+markers',
+            mode: 'markers',
             marker: { color: 'blue' },
+            connectgaps: false
           },
         ]}
         layout={{ width: 800, height: 400, title: 'Value Over Time' }}

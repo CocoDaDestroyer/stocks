@@ -5,6 +5,7 @@ import Plot from 'react-plotly.js';
 import TradesTable from './tradingtable';
 import NetWorthGraph from './moneygraph';
 import FinalNetWorth from './finalnetworth';
+import "../result.css"
 const Result = () => {
     const { strategy, model } = useParams();
     const [networths, setNetworths] = useState([]);
@@ -13,7 +14,7 @@ const Result = () => {
     console.log(model)
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/fetch-data/${strategy}/${model}`);
+        const response = await axios.get(`https://tradesapi-e928998659c3.herokuapp.com/api/fetch-data/${strategy}/${model}`);
 
         const networthsData = response.data.networthsData;
         const tradesData = response.data.tradesData;
@@ -30,7 +31,10 @@ const Result = () => {
     }, []);
     return (
         <div>
+          <h2>Starting Value: $10,000.00</h2>
+          
           <FinalNetWorth netWorths = {networths}/>
+          
           <NetWorthGraph netWorthData={networths}/>
           <h2>Trades Table</h2>
           <TradesTable tradingData={trading} /> 

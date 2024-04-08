@@ -1,0 +1,79 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+    min-height: 100vh;
+  }
+  
+  .title-screen {
+    align-content: center;
+    margin-top: 15vh;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: 40vh;
+    padding: 0 5%;
+  }
+  
+  .title {
+    font-size: 4vw;
+    color: #333;
+    margin-bottom: 3vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .description {
+    font-size: 3vw;
+    color: #666;
+    margin-bottom: 5vh;
+    line-height: 1.5; 
+  }
+  
+  .start-button {
+    display: inline-block;
+    padding: 2vh 4vw;
+    font-size: 3vw;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 48px;
+    }
+  
+    .description {
+      font-size: 24px;
+    }
+  
+    .start-button {
+      font-size: 24px;
+      padding: 15px 30px;
+    }
+  }

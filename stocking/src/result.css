@@ -1,0 +1,42 @@
+.trades-table-container {
+    max-height: 400px;
+    overflow: auto;
+    position: relative;
+  }
+  
+  .trades-table-wrapper {
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+  
+  .trades-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .trades-table th,
+  .trades-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .trades-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .trades-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .trades-table .even-row {
+    background-color: #f2f2f2;
+  }
+  
+  .trades-table .odd-row {
+    background-color: #ffffff;
+  }

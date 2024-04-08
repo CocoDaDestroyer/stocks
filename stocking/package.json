@@ -1,5 +1,5 @@
 {
-  "homepage": "https://cocodadestroyer.github.io/stocks",
+  "homepage": "https://cocodadestroyer.github.io/stocks/",
   "name": "stocking",
   "version": "0.1.0",
   "private": true,
@@ -32,7 +32,7 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://tradesapi-e928998659c3.herokuapp.com/",
+  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -44,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

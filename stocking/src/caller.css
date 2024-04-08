@@ -1,0 +1,51 @@
+.form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  margin-top: 100px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+button[type="button"],
+button[type="submit"] {
+  background-color: #007bff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 16px;
+}
+
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff; /* Change text color to white */
+}
+
+.selected {
+  background-color: #d0d0d0 !important;
+}
+
+.option-box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import "../caller.css"
 import { useNavigate } from "react-router-dom";
 import DescriptionBox from './descriptionbox';
 const Form = () => {
@@ -32,72 +33,74 @@ const Form = () => {
     ...buttonStyle,
     backgroundColor: '#d0d0d0',
   };
-
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <h3>What type of model would you like to use? Choose one:</h3>
-        <button
-          type="button"
-          style={selectedModel === 'LogReg' ? selectedButtonStyle : buttonStyle}
-          onClick={() => setSelectedModel('LogReg')}
-          onMouseEnter={() => handleButtonHover('LogReg')}
-          onMouseLeave={handleButtonLeave}
-        >
-          Logistic Regression
-        </button>
-        <button
-          type="button"
-          style={selectedModel === 'Forest' ? selectedButtonStyle : buttonStyle}
-          onClick={() => setSelectedModel('Forest')}
-          onMouseEnter={() => handleButtonHover('Forest')}
-          onMouseLeave={handleButtonLeave}
-        >
-          Random Forest
-        </button>
-        <button
-          type="button"
-          style={selectedModel === 'XGBoost' ? selectedButtonStyle : buttonStyle}
-          onClick={() => setSelectedModel('XGBoost')}
-          onMouseEnter={() => handleButtonHover('XGBoost')}
-          onMouseLeave={handleButtonLeave}
-        >
-          XGBoost
-        </button>
-      </div>
-      <div>
-        <h3>Which trading strategy would you like to use? Choose one:</h3>
-        <button
-          type="button"
-          style={selectedStrategy === 'TopTwo' ? selectedButtonStyle : buttonStyle}
-          onClick={() => setSelectedStrategy('TopTwo')}
-          onMouseEnter={() => handleButtonHover('TopTwo')}
-          onMouseLeave={handleButtonLeave}
-        >
-          Top Two 
-        </button>
-        <button
-          type="button"
-          style={selectedStrategy === 'Binary' ? selectedButtonStyle : buttonStyle}
-          onClick={() => setSelectedStrategy('Binary')}
-          onMouseEnter={() => handleButtonHover('Binary')}
-          onMouseLeave={handleButtonLeave}
-        >
-          Binary
-        </button>
-        <button
-          type="button"
-          style={selectedStrategy === 'Conservative' ? selectedButtonStyle : buttonStyle}
-          onClick={() => setSelectedStrategy('Conservative')}
-          onMouseEnter={() => handleButtonHover('Conservative')}
-          onMouseLeave={handleButtonLeave}
-        >
-          Conservative
-        </button>
-      </div>
-      <button type="submit">Submit</button>
-      <DescriptionBox hoveredButton = {hoveredButton}/>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit} className='form'>
+        <div>
+          <h3 className='question'>What type of model would you like to use? Choose one:</h3>
+          <button
+            type="button"
+            style={selectedModel === 'LogReg' ? selectedButtonStyle : buttonStyle}
+            onClick={() => setSelectedModel('LogReg')}
+            onMouseEnter={() => handleButtonHover('LogReg')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Logistic Regression
+          </button>
+          <button
+            type="button"
+            style={selectedModel === 'Forest' ? selectedButtonStyle : buttonStyle}
+            onClick={() => setSelectedModel('Forest')}
+            onMouseEnter={() => handleButtonHover('Forest')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Random Forest
+          </button>
+          <button
+            type="button"
+            style={selectedModel === 'XGBoost' ? selectedButtonStyle : buttonStyle}
+            onClick={() => setSelectedModel('XGBoost')}
+            onMouseEnter={() => handleButtonHover('XGBoost')}
+            onMouseLeave={handleButtonLeave}
+          >
+            XGBoost
+          </button>
+        </div>
+        <div>
+          <h3 className='question'>Which trading strategy would you like to use? Choose one:</h3>
+          <button
+            type="button"
+            style={selectedStrategy === 'TopTwo' ? selectedButtonStyle : buttonStyle}
+            onClick={() => setSelectedStrategy('TopTwo')}
+            onMouseEnter={() => handleButtonHover('TopTwo')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Top Two 
+          </button>
+          <button
+            type="button"
+            style={selectedStrategy === 'Binary' ? selectedButtonStyle : buttonStyle}
+            onClick={() => setSelectedStrategy('Binary')}
+            onMouseEnter={() => handleButtonHover('Binary')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Binary
+          </button>
+          <button
+            type="button"
+            style={selectedStrategy === 'Conservative' ? selectedButtonStyle : buttonStyle}
+            onClick={() => setSelectedStrategy('Conservative')}
+            onMouseEnter={() => handleButtonHover('Conservative')}
+            onMouseLeave={handleButtonLeave}
+          >
+            Conservative
+          </button>
+        </div>
+        <button type="submit">Submit</button>
+        
+      </form>
+      <DescriptionBox className = "option-box" hoveredButton = {hoveredButton}/>
+    </div>
   );
 };
 
