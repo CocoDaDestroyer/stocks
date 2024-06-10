@@ -14,7 +14,7 @@ const Result = () => {
     console.log(model)
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://tradesapi-e928998659c3.herokuapp.com/api/fetch-data/${strategy}/${model}`);
+        const response = await axios.get(`https://stocksapi-cdgf.onrender.com/api/fetch-data/${strategy}/${model}`);
 
         const networthsData = response.data.networthsData;
         const tradesData = response.data.tradesData;
